@@ -26,7 +26,6 @@ public class Calculator {
             System.out.println("나눗셈 연산에서 분모(두번째 정수)는 0이 될 수 없습니다. 다시 입력해주세요.");
             System.out.print("두번째 숫자를 입력하세요: ");
             long inPutValue3 = scanner.nextInt();
-
             numbox2 = inPutValue3; // 새로운 값을 위에서 선언한 변수에 재할당
         }
 
@@ -43,16 +42,16 @@ public class Calculator {
         // if와 else if를 사용하여 매개변수에 .equals로 true와 false를 구분 해, 각 상황에 맞게 연산하도록 구현하였습니다
             if (add2.equals("+")){
                 long plusResult = numbox1 + numbox2;
-                System.out.println(numbox1+charBox2+numbox2+ "="+ plusResult);
+                System.out.println(numbox1+" "+charBox2+" "+numbox2+ "="+ plusResult);
             } else if (add2.equals("-")) {
                 long minusResult = numbox1 - numbox2;
-                System.out.println(numbox1+charBox2+numbox2+ "="+ minusResult);
+                System.out.println(numbox1+" "+charBox2+" "+numbox2+ "="+ minusResult);
             } else if (add2.equals("*")) {
                 long mulResult = numbox1 * numbox2;
-                System.out.println(numbox1+charBox2+numbox2+ "="+ mulResult);
+                System.out.println(numbox1+" "+charBox2+" "+numbox2+ "="+ mulResult);
             } else if (add2.equals("/")) {
                 long divResult = numbox1 / numbox2;
-                System.out.println(numbox1+charBox2+numbox2+ "="+ divResult);
+                System.out.println(numbox1+" "+charBox2+" "+numbox2+ "="+ divResult);
             }
 
                 System.out.println("더 계산하시겠습니까? 소문자로 써주세요(exit 입력 시 종료)");
