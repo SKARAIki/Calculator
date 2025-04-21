@@ -1,4 +1,4 @@
-package com.example.calculator;
+package com.example.calculator.lv1;
 
 import java.util.Scanner;
 
@@ -15,9 +15,10 @@ public class Calculator {
         long numbox1 = inPutValue1;
 
         // 추가로 사칙연산을 제외한 다른 문자를 입력하였을 때 다시 입력하세요. 라는 기능을 넣으려면?
-        System.out.print("사칙연산 기호을 입력하세요: ");
+       {System.out.print("사칙연산 기호을 입력하세요: ");
         String addBox = scanner.next();
         char charBox2 = addBox.charAt(0); // 문자열 가장 앞에 있는 문자를 따오는 것
+
         System.out.print("두번째 숫자를 입력하세요: ");
         long inPutValue2 = scanner.nextInt();
         long numbox2 = inPutValue2;
@@ -43,9 +44,10 @@ public class Calculator {
                 long mulResult = numbox1 * numbox2;
                 System.out.println(numbox1+" "+charBox2+" "+numbox2+ "="+ mulResult);
             } else if (add2.equals("/")) {
-                long divResult = numbox1 / numbox2;
+                double divResult =(double) numbox1 / numbox2;
                 System.out.println(numbox1+" "+charBox2+" "+numbox2+ "="+ divResult);
-            }
+            } // char라는 문자가 숫자+char로 붙여버리면 문자의 유니코드화 되어 1 + 2가 아닌 1+유니코드+2가 되어버리므로
+            // 공백을 두어 의도와 다른 행동하지 못하게 방지
 
                 System.out.println("더 계산하시겠습니까? 소문자로 써주세요(exit 입력 시 종료)");
                 String exitBox = scanner.next();
@@ -53,11 +55,7 @@ public class Calculator {
                     break;
                 }
             }
-
-
-
-
         }
-
     }
+}
 
