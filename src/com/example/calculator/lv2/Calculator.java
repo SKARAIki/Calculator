@@ -35,13 +35,10 @@ public class Calculator {
         }
         return result;
     }
-    public long getcalculatorList(){
-        return calculatorList();
+    public List<Long> getcalculatorList(){
+        return  calculatorList;
     }
 
-    private long calculatorList() {
-        return 0;
-    }
 
 
     public void setCalculatorList(){
