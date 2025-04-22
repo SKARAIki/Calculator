@@ -35,7 +35,7 @@ public class Calculator {
         }
         return result;
     }
-    public List<Long> getcalculatorList(){
+    public List<Long> getcalculatorList(){ // 반환타입이 long이 아닌 List<long>이라서
         return  calculatorList;
     }
 
