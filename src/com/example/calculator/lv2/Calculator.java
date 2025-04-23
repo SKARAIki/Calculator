@@ -12,7 +12,8 @@ public class Calculator {
 
     //기능
     public long calculate(long numbox1, char operator, long numbox2){
-        long result = 0; // 이따 여러숫자 넣어서 확인
+
+        long result = 0;
         switch (operator){
             case '+' :
                 result = numbox1 + numbox2;
@@ -35,15 +36,20 @@ public class Calculator {
         }
         return result;
     }
-    public List<Long> getcalculatorList(){ // 반환타입이 long이 아닌 List<long>이라서
-        return  calculatorList;
+    public List<Long> getcalculatorList(){ // 반환타입이 long이 아닌 List<Long>이라서
+       try {
+           for (int i = 0; i <= calculatorList.size(); i++)
+               System.out.println(i+"번째 결과: "+ calculatorList.get(i));
+       } catch (Exception e){
+
+       }
+        return  this.calculatorList;
     }
 
-
-
-    public void setCalculatorList(){
-
+    public void setCalculatorList(List<Long> calculatorList) {
+        this.calculatorList = calculatorList;
     }
-
-
+    public void removeResult(){
+        calculatorList.remove(0);
+    }
 }
